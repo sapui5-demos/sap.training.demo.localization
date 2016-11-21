@@ -9,24 +9,24 @@ sap.ui.define([
 
 			// JSON Model with application data
 			var oModel = new JSONModel();
-			oModel.loadData("json/data.json");
+			oModel.loadData("model/data.json");
 			this.getView().setModel(oModel);
 
 			// Instantiating a Resource Model programmatically (instead of using
 			// the attributes resourceBundleName and resourceBundleAlias
 			// of the view tag)
-			//var i18nModel = new sap.ui.model.resource.ResourceModel({
-			//	bundleName: "sap.training.i18n.messageBundle"
-			//});
-			//sap.ui.getCore().setModel(i18nModel, "i18n");
+			// var i18nModel = new sap.ui.model.resource.ResourceModel({
+			// 	bundleName: "sap.training.i18n.i18n"
+			// });
+			// sap.ui.getCore().setModel(i18nModel, "i18n");
 
 			var sCurrentLocale = sap.ui.getCore().getConfiguration().getLanguage();
 
 			var sText = "Current Language Code / Locale: " + sCurrentLocale;
-			this.getView().byId("myTextView1").setText(sText);
+			this.getView().byId("idText1").setText(sText);
 
 			var oBundle = jQuery.sap.resources({
-				url: "i18n/messageBundle.properties",
+				url: "i18n/i18n.properties",
 				locale: sCurrentLocale
 			});
 
@@ -40,7 +40,7 @@ sap.ui.define([
 			var sDate = oDateFormat.format(new Date());
 
 			var sDateText = oBundle.getText("mainTextDate", [sDate]);
-			this.getView().byId("myTextView2").setText(sDateText);
+			this.getView().byId("idText2").setText(sDateText);
 
 		}
 

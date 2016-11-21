@@ -1,1 +1,7 @@
 /* Enter your custom styles here */
+
+.myText {
+  font-size: 200%;
+  font-weight: bold;
+  color: green;
+}
