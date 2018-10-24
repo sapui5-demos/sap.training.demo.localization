@@ -18,12 +18,15 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 
 		<script>
-			var view = sap.ui.view({
-							id: "idMain",
+			sap.ui.require(["sap/ui/core/mvc/View"], function(View) {
+				View.create({
+								  id: "idMain",
 							viewName: "sap.training.view.Main",
-							type: sap.ui.core.mvc.ViewType.XML
-						});
-			view.placeAt("content");
+								type: sap.ui.core.mvc.ViewType.XML
+					}).then(function(oView) {
+						oView.placeAt("content");
+				});
+			});
 		</script>
 	</head>
 
