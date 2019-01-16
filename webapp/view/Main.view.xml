@@ -2,9 +2,7 @@
 		  xmlns:html="http://www.w3.org/1999/xhtml"
 		  xmlns:f="sap.ui.layout.form"
 		  xmlns:mvc="sap.ui.core.mvc"
-	      xmlns="sap.m"
-		  resourceBundleName="sap.training.i18n.i18n"
-		  resourceBundleAlias="i18n">
+	      xmlns="sap.m">
 
 	<Text id="idText1" class="myText"/>
 		      

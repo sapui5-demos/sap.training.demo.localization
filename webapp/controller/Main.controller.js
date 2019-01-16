@@ -12,13 +12,11 @@ sap.ui.define([
 			oModel.loadData("model/data.json");
 			this.getView().setModel(oModel);
 
-			// Instantiating a Resource Model programmatically (instead of using
-			// the attributes resourceBundleName and resourceBundleAlias
-			// of the view tag)
-			// var i18nModel = new sap.ui.model.resource.ResourceModel({
-			// 	bundleName: "sap.training.i18n.i18n"
-			// });
-			// this.getView().setModel(i18nModel, "i18n");
+			// Instantiating a Resource Model programmatically
+			var i18nModel = new sap.ui.model.resource.ResourceModel({
+				bundleName: "sap.training.i18n.i18n"
+			});
+			this.getView().setModel(i18nModel, "i18n");
 
 			var sCurrentLocale = sap.ui.getCore().getConfiguration().getLanguage();
 
@@ -31,7 +29,7 @@ sap.ui.define([
 			});
 
 			//or retrieve the bundle from the model
-			//var oBundle = this.getView().getModel("i18n").getResourceBundle();
+			//var oBundle = i18nModel.getResourceBundle();
 
 			var oDateFormat = sap.ui.core.format.DateFormat.getDateInstance({
 				style: "long"

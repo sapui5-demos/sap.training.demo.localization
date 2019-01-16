@@ -11,3 +11,8 @@ changes_preview.js
 fioriHtmlRunner.html
 .*/fioriHtmlRunner.html
 /.user.project.json
+AppVariant_index.html
+APIExternalProducer.js
+.*/APIExternalProducer.js
+preview.json
+cp.project.properties.json
