@@ -12,20 +12,25 @@
 			data-sap-ui-libs="sap.m"
 			data-sap-ui-theme="sap_belize"
 			data-sap-ui-compatVersion="edge"
-			data-sap-ui-resourceroots='{"sap.training": ""}'>
+			data-sap-ui-resourceroots='{"sap.training": "./"}'
+			data-sap-ui-async="true">
 		</script>
 
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 
 		<script>
-			sap.ui.require(["sap/ui/core/mvc/View"], function(View) {
-				View.create({
-								  id: "idMain",
-							viewName: "sap.training.view.Main",
-								type: sap.ui.core.mvc.ViewType.XML
-					}).then(function(oView) {
-						oView.placeAt("content");
+			sap.ui.getCore().attachInit(function () {
+				
+				sap.ui.require(["sap/ui/core/mvc/View"], function(View) {
+					View.create({
+									  id: "idMain",
+								viewName: "sap.training.view.Main",
+									type: sap.ui.core.mvc.ViewType.XML
+						}).then(function(oView) {
+							oView.placeAt("content");
+					});
 				});
+				
 			});
 		</script>
 	</head>

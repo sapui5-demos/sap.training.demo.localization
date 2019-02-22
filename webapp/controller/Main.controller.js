@@ -1,11 +1,11 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller", "sap/ui/model/json/JSONModel"
-], function(Controller, JSONModel) {
+	"sap/ui/core/mvc/Controller", "sap/ui/core/format/DateFormat", "sap/ui/model/json/JSONModel", "sap/ui/model/resource/ResourceModel"
+], function (Controller, DateFormat, JSONModel, ResourceModel) {
 	"use strict";
 
 	return Controller.extend("sap.training.controller.Main", {
 
-		onInit: function() {
+		onInit: function () {
 
 			// JSON Model with application data
 			var oModel = new JSONModel();
@@ -13,7 +13,7 @@ sap.ui.define([
 			this.getView().setModel(oModel);
 
 			// Instantiating a Resource Model programmatically
-			var i18nModel = new sap.ui.model.resource.ResourceModel({
+			var i18nModel = new ResourceModel({
 				bundleName: "sap.training.i18n.i18n"
 			});
 			this.getView().setModel(i18nModel, "i18n");
@@ -31,7 +31,7 @@ sap.ui.define([
 			//or retrieve the bundle from the model
 			//var oBundle = i18nModel.getResourceBundle();
 
-			var oDateFormat = sap.ui.core.format.DateFormat.getDateInstance({
+			var oDateFormat = DateFormat.getDateInstance({
 				style: "long"
 			});
 
