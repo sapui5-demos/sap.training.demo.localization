@@ -6,6 +6,16 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("sap.training.controller.Main_async", {
+		
+		
+	/*	
+		As of SAPUI5 1.77, the fallback chain can be configured using a custom fallback locale and a list of supported locales.
+		Supported Locales specifies a list of locales for which resource bundles may be requested. If this list is empty or not specified, all locales are supported.
+		The supportedLocales work like a filter. Each locale in the fallback chain is checked against this list and only applied if it is contained there.
+		The Fallback Locale specifies the custom fallback locale in the locale fallback chain. If not specified the fallbackLocale defaults to en.
+		To skip the custom fallback locale, the empty string "" can be configured as fallbackLocale.
+	*/
+
 
 		onInit: function () {
 
