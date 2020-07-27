@@ -8,9 +8,9 @@
 		<title>Demo Localization</title>
 
 		<script id="sap-ui-bootstrap"
-			src="../../resources/sap-ui-core.js"
+			src="resources/sap-ui-core.js"
 			data-sap-ui-libs="sap.m"
-			data-sap-ui-theme="sap_belize"
+			data-sap-ui-theme="sap_fiori_3"
 			data-sap-ui-compatVersion="edge"
 			data-sap-ui-resourceroots='{"sap.training": "./"}'
 			data-sap-ui-async="true">
@@ -22,9 +22,8 @@
 			sap.ui.getCore().attachInit(function () {
 				
 				sap.ui.require(["sap/ui/core/mvc/View"], function(View) {
-					View.create({
-									  id: "idMain",
-								viewName: "sap.training.view.Main",
+					View.create({	  id: "idMain",
+								viewName: "sap.training.view.Main_async",
 									type: sap.ui.core.mvc.ViewType.XML
 						}).then(function(oView) {
 							oView.placeAt("content");
